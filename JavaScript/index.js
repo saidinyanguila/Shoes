@@ -29,7 +29,7 @@ leftButtons.forEach(lb => lb.addEventListener('click', function() {
 function setItem(id) {
     localStorage.clear();
     localStorage.setItem("item_id", id);
-    window.location.href = "/product.html";
+    window.location.href = "/Shoes/product.html";
 }
 
 // Preview Images
