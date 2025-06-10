@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes | Wear your desires</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <script src="JavaScript/shoes.js"></script>
+    <script src="JavaScript/jquery.js"></script>
+</head>
+<body>
+    <div class="web-app">
+        <nav class="pre-header">
+            <div class="region">
+                <img src="https://flagcdn.com/w320/za.png" alt="">
+                <p>ZA</p>
+            </div>
+
+            <ul id="handy-links" style="list-style-type: none;">
+                <li class="mid"><a href="">Stores</a></li>
+                <li class="mid"><a href="">Orders</a></li>
+                <li class="mid"><a href="">Returns</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </nav>
+
+        <header class="site-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <nav class="main-nav">
+                <div class="site-logo" style="margin-right: 18px;"><a href="/"><h2>Shoes</h2></a></div>
+
+                <ul class="header-links" style="list-style-type: none;">
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">Kids</a></li>
+                    <li class="dropdown"><a href="">Sports</a></li>
+                    <li><a href="" style="color: rgb(255, 40, 40);">Sale</a></li>
+                </ul>
+            </nav>
+
+            <nav class="menu-nav">
+                <button href="" class="nav-menu-button"><i class="fa-solid fa-search"></i></button>
+                <button href="" class="nav-menu-button"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="nav-menu-button"><i class="fa-solid fa-user"></i></button>
+            </nav>
+        </header>
+
+        <nav class="sale-banner" style="display: flex;">
+            <a href="">Buy now and save <em>40%</em> on delivery fees</a>
+            <i class="fa-solid fa-close"></i>
+        </nav>
+
+        <!--Body-->
+
+        <footer class="site-footer">
+            <div class="spacer"></div>
+
+            <div class="footer-content">
+                <div class="footer-sec">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="">Men</a></li>
+                        <li><a href="">Women</a></li>
+                        <li><a href="">Kids</a></li>
+                        <li><a href="">Unisex</a></li>
+                        <li><a href="">Sports</a></li>
+                        <li><a href="">Formal</a></li>
+                        <li><a href="">Casual</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-sec">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="">My Account</a></li>
+                        <li><a href="">Wish List</a></li>
+                        <li><a href="">Cart</a></li>
+                        <li><a href="">Order History</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-sec">
+                    <h3>Company Info</h3>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Suppliers</a></li>
+                        <li><a href="">Partners</a></li>
+                        <li><a href="">Stores</a></li>
+                        <li><a href="">Press and News</a></li>
+                        <li><a href="">Fund Raisers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-sec">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Customer Care</a></li>
+                        <li><a href="">Returns</a></li>
+                        <li><a href="">Track order</a></li>
+                        <li><a href="">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-sec">
+                    <h3>Socials</h3>
+                    <ul class="socials">
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <div class="partners">
+            <a href=""><img src="Media/Images/Partners/addidas.png" alt=""></a>
+            <a href=""><img src="Media/Images/Partners/puma.png" alt=""></a>
+            <a href=""><img src="Media/Images/Partners/nike.png" alt=""></a>
+            <a href=""><img src="Media/Images/Partners/new balance.png" alt=""></a>
+        </div>
+    </div>
+
+    <script src="JavaScript/index.js"></script>
+    <script>
+        $(".fa-solid.fa-close").click(function() {
+            $(".sale-banner").fadeOut();
+        });
+    </script>
+</body>
+</html>
