@@ -34,7 +34,7 @@ let newSec = document.getElementById("new-sec");
 for (let i = 5; i > 0; i--) {
     let item = document.createElement("a");
     item.className = 'item';
-    item.setAttribute("href", `/product.html?id=${shoes[i].id}`);
+    item.setAttribute("href", `/Shoes/product.html?id=${shoes[i].id}`);
 
     item.innerHTML = `
         <img src="Media/Images/Shoes/${shoes[i].id}_side.png" id="${shoes[i].id}_thumb" alt="" class="item_thmb">
