@@ -1,3 +1,7 @@
+$(".fa-solid.fa-close").click(function() {
+    $(".sale-banner").fadeOut();
+});
+
 //Slider
 var slides = document.querySelectorAll(".slide");
 var buttons = document.querySelectorAll(".slider-nav-button");
@@ -25,51 +29,54 @@ leftButtons.forEach(lb => lb.addEventListener('click', function() {
     lb.parentElement.classList.remove('scroll');
 }))
 
-//
-function setItem(id) {
-    localStorage.clear();
-    localStorage.setItem("item_id", id);
-    window.location.href = "/Shoes/product.html";
+// New Products
+let newSec = document.getElementById("new-sec");
+for (let i = 5; i > 0; i--) {
+    let item = document.createElement("a");
+    item.className = 'item';
+    item.setAttribute("href", `/product.html?id=${shoes[i].id}`);
+
+    item.innerHTML = `
+        <img src="Media/Images/Shoes/${shoes[i].id}_side.png" id="${shoes[i].id}_thumb" alt="" class="item_thmb">
+
+        <h3 class="item-name">${shoes[i].name}</h3>
+        <p class="item-price">R ${shoes[i].price}</p>
+        <div class="item-actions">
+            <button class="item-buy">Add to cart</button>
+            <button class="item-like"><i class="fa-regular fa-heart"></i></button>
+        </div>
+    `
+    newSec.append(item);
 }
 
-// Preview Images
-function browseImg(event) {
-    event.stopPropagation(); 
-    
-    let preview = event.target.parentElement.previousElementSibling;
-    preview.src = event.target.src;
+// Popular Products
+let popular = document.getElementById("popular-sec");
+for (let i = 0; i < 5; i++) {
+    let item = document.createElement("a");
+    item.className = 'item';
+    item.setAttribute("href", `/product.html?id=${shoes[i].id}`);
+
+    item.innerHTML = `
+        <img src="Media/Images/Shoes/${shoes[i].id}_side.png" id="${shoes[i].id}_thumb" alt="" class="item_thmb">
+        <h3 class="item-name">${shoes[i].name}</h3>
+        <p class="item-price">R ${shoes[i].price}</p>
+        <div class="item-actions">
+            <button class="item-buy">Add to cart</button>
+            <button class="item-like"><i class="fa-regular fa-heart"></i></button>
+        </div>
+    `
+    popular.append(item);
 }
 
-// Product
-function loadPopular() {
-    let popular = document.getElementById("popular-sec");
+// Mobile
+        document.getElementById("btn-expand").addEventListener('click', showMobileNav);
+        document.getElementById("btn-collapse").addEventListener('click', hideMobileNav);
 
-    for (let i = 0; i < 5; i++) {
-        let item = document.createElement("div");
-        item.addEventListener('click', () => { setItem(shoes[i].id) })
-
-        item.className = 'item';
-
-        item.innerHTML = `
-            <img src="Media/Images/Shoes/${shoes[i].id}_side.png" id="${shoes[i].id}_thumb" alt="" class="item_thmb">
-
-            <div class="item-thmb-options">
-                <img onmouseenter="browseImg(event)" src="Media/Images/Shoes/${shoes[i].id}_side.png" class="item-thmb-option active" alt="">
-                <img onmouseenter="browseImg(event)" src="Media/Images/Shoes/${shoes[i].id}_top.png" class="item-thmb-option" alt="">
-                <img onmouseenter="browseImg(event)" src="Media/Images/Shoes/${shoes[i].id}_back.png" class="item-thmb-option" alt="">
-            </div>
-
-            <h3 class="item-name">${shoes[i].name}</h3>
-
-            <div class="item-actions">
-                <button class="item-buy">Add to cart</button>
-                <button class="item-like"><i class="fa-regular fa-heart"></i></button>
-            </div>
-        `
-
-        popular.append(item);
-        
-    }
-}
-
-loadPopular();
+        function showMobileNav() {
+            var mobileNav = document.getElementById("mobile-nav");
+            mobileNav.classList.add("show");
+        }
+        function hideMobileNav() {
+            var mobileNav = document.getElementById("mobile-nav");
+            mobileNav.classList.remove("show");
+        }

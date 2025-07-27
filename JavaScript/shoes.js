@@ -1,17 +1,19 @@
 class Item {
-    constructor(id, name, price, colors) {
+    constructor(id, name, price, colors, desc) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.colors = colors;
+        this.sizes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        this.desc = desc;
     }
 }
 
 const shoes = [
-    new Item("00", "Nike Air Force 1 '07", 2199.99, ["Blue", "Black", "White"]),
-    new Item("01", "Nike Air Force 1 '07 LV8 - calzado", 2499.99, ["Blue", "Black", "White"]),
-    new Item("02", "New Balance 327 - Pink Gum", 1499.99, ["Blue", "Black", "White"]),
-    new Item("03", "Adidas Drop Step Low 2.0", 1999.99, ["Blue", "Black", "White"]),
-    new Item("05", "Asics Gel-Kayano 14", 2559.99, ["Blue", "Black", "White"]),
-    new Item("04", "Puma Rebound V6 Low", 1799.99, ["Blue", "Black", "White"]),
+    new Item("00", "Nike Air Force 1 '07", 2199.99, ["Blue", "Black", "White"], "Quicker than 1, 2, 3—the original hoops shoe lets you get going. This version of the AF-1 features Nike EasyOn technology for a hands-free experience. The flexible heel collapses when you step in then snaps back into place, making it easy to slip the shoe on and off. Add that to its clean, crisp leather and you've got ultimate wearability. Yeah, it's everything you love and then some.<br/><br/> <ul><li>Colour Shown: White/White/White</li><li>Style: DX5883-100</li><li>Country/Region of Origin: Vietnam</li>"),
+    new Item("01", "Nike Air Force 1 '07 LV8 - calzado", 2499.99, ["Blue", "Black", "White"], "Quicker than 1, 2, 3—the original hoops shoe lets you get going. This version of the AF-1 features Nike EasyOn technology for a hands-free experience. The flexible heel collapses when you step in then snaps back into place, making it easy to slip the shoe on and off. Add that to its clean, crisp leather and you've got ultimate wearability. Yeah, it's everything you love and then some.<br/><br/> <ul><li>Colour Shown: White/White/White</li><li>Style: DX5883-100</li><li>Country/Region of Origin: Vietnam</li>"),
+    new Item("02", "New Balance 327 - Pink Gum", 1499.99, ["Blue", "Black", "White"], "Modern design meets our heritage running style with the 327. Crafted with premium materials including suede, these shoes have an upper design that celebrates our iconic '70s silhouette while adding contemporary details like a bold N logo for a fresh take on an all-time classic. Comfortable and obviously stylish, these women's retro sneakers give your everyday wear a fashionable finish."),
+    new Item("03", "Adidas Drop Step Low 2.0", 1999.99, ["Blue", "Black", "White"], "Originally a basketball shoe, the adidas Drop Step Low 2.0 continues its evolution into streetwear royalty while blurring the lines between classic and contemporary. This low-cut version mixes suede and synthetic leather through the upper and rides on a sculpted outsole that transforms iconic basketball details into a lifestyle staple. A LYCRA® lining gives these shoes a unique sensation that's all about comfort."),
+    new Item("05", "Asics Gel-Kayano 14", 2559.99, ["Blue", "Black", "White"], "The GEL-KAYANO™ 14 sneaker resurfaces with its late 2000s aesthetic as a nod to our storied GEL-KAYANO™ series.<br/><br/>Reinterpreting the shoe's performance capabilities with updated materials and componentry, this version became the first iteration in the sneaker's lineage to be designed by someone other than Toshikazu Kayano.<br/><br/>Inspired by the original tooling from 2008, this shoe also features GEL™ technology underfoot for advanced impact absorption.<br/><br/>Style #: 1203A537.109<br/>UPC #: 197298798501"),
+    new Item("04", "Puma Rebound V6 Low", 1799.99, ["Blue", "Black", "White"], "Upgrade your sneaker collection with the Puma Rebound V6 Lo Mens Shoes White/Black. Featuring a sleek white and black design, these shoes combine modern style with ultimate comfort. The breathable upper provides excellent ventilation, while the cushioned midsole ensures lasting comfort during all-day wear. The durable rubber outsole offers superior traction, making these shoes perfect for both casual outings and light sports activities. With their timeless color combination and performance-driven features, these sneakers are a versatile addition to any wardrobe."),
 ]; 

@@ -11,12 +11,27 @@
 </head>
 <body>
     <div class="web-app">
-        <nav class="pre-header">
-            <div class="region">
-                <img src="https://flagcdn.com/w320/za.png" alt="">
-                <p>ZA</p>
-            </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <button id="btn-collapse"><i class="fa-solid fa-close"></i></button>
 
+            <div class="site-logo"><a href="/"><h2>Shoes</h2></a></div>
+
+            <ul>
+                <li><a href="">Men</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Kids</a></li>
+                <li><a href="">Sports</a></li>
+                <li><a href="">Brands</a></li>
+                <li><a href="" style="color: red;">Sale</a></li>
+            </ul>
+
+            <div class="btns">
+                <button id="mobile-btn-cart" style="margin-right: 10px;">Cart</button>
+                <button id="mobile-btn-user" style="margin-left: 10px;">Account</button>
+            </div>
+        </div>
+
+        <nav class="pre-header">
             <ul id="handy-links" style="list-style-type: none;">
                 <li class="mid"><a href="">Stores</a></li>
                 <li class="mid"><a href="">Orders</a></li>
@@ -25,23 +40,65 @@
             </ul>
         </nav>
 
-        <header class="site-header" style="display: flex; align-items: center; justify-content: space-between;">
+        <header class="site-header">
             <nav class="main-nav">
-                <div class="site-logo" style="margin-right: 18px;"><a href="/Shoes"><h2>Shoes</h2></a></div>
+                <div class="site-logo" style="margin-right: 18px;"><a href="/"><h2>Shoes</h2></a></div>
 
                 <ul class="header-links" style="list-style-type: none;">
                     <li><a href="">Men</a></li>
                     <li><a href="">Women</a></li>
                     <li><a href="">Kids</a></li>
-                    <li class="dropdown"><a href="">Sports</a></li>
+                    <li><a href="">Sports</a></li>
+                    <li class="dropdown">
+                        <a>Brands</a>
+                        <div class="brands-list">
+                            <ul class="ul">
+                                <li><a href="">Nike</a></li>
+                                <li><a href="">Addidas</a></li>
+                                <li><a href="">Puma</a></li>
+                                <li><a href="">Reebok</a></li>
+                                <li><a href="">New Balance</a></li>
+                                <li><a href="">Under Armor</a></li>
+                                <li><a href="">Asics</a></li>
+                                <li><a href="">Skechers</a></li>
+                                <li><a href="">Converse</a></li>
+                                <li><a href="">Vans</a></li>
+                            </ul>
+                            <ul class="ul">
+                                <li><a href="">Dr. Martens</a></li>
+                                <li><a href="">Timberland</a></li>
+                                <li><a href="">Birkenstock</a></li>
+                                <li><a href="">Reebok</a></li>
+                                <li><a href="">Crocs</a></li>
+                                <li><a href="">Ugg</a></li>
+                                <li><a href="">Toms</a></li>
+                                <li><a href="">Allbirds</a></li>
+                                <li><a href="">Fila</a></li>
+                                <li><a href="">Steve Madden</a></li>
+                            </ul>
+                            <ul class="ul">
+                                <li><a href="">Gucci</a></li>
+                                <li><a href="">Balenciaga</a></li>
+                                <li><a href="">Prada</a></li>
+                                <li><a href="">Louis Vuitton</a></li>
+                                <li><a href="">Christian Louboutin</a></li>
+                                <li><a href="">Alexander McQueen</a></li>
+                                <li><a href="">Salvatore Ferragamo</a></li>
+                                <li><a href="">Jimmy Choo</a></li>
+                                <li><a href="">Chanel</a></li>
+                                <li><a href="">Hermès</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="" style="color: rgb(255, 40, 40);">Sale</a></li>
                 </ul>
             </nav>
 
             <nav class="menu-nav">
-                <button href="" class="nav-menu-button"><i class="fa-solid fa-search"></i></button>
-                <button href="" class="nav-menu-button"><i class="fa-solid fa-cart-shopping"></i></button>
-                <button class="nav-menu-button"><i class="fa-solid fa-user"></i></button>
+                <button id="btn-search" class="nav-menu-button"><i class="fa-solid fa-search"></i></button>
+                <button id="btn-cart" class="nav-menu-button"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button id="btn-user" class="nav-menu-button"><i class="fa-solid fa-user"></i></button>
+                <button id="btn-expand" class="nav-menu-button"><i class="fa-solid fa-bars"></i></button>
             </nav>
         </header>
 
@@ -79,6 +136,13 @@
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
                         </select>
                     </div>
 
@@ -113,41 +177,8 @@
         <div class="description section">
             <h4>Description</h4>
             <div class="desc-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium expedita, totam beatae rerum delectus quibusdam eos deserunt voluptatibus, esse minus repellat ipsam quia, praesentium voluptas excepturi officiis temporibus veritatis nam voluptatem. Commodi quo nisi, perferendis exercitationem eum quis error temporibus porro minus deleniti sed, delectus nostrum perspiciatis voluptas sequi nihil, nam consectetur nobis. Sunt nobis, eaque, deleniti vitae nemo labore molestias vero, ratione praesentium optio provident? Reprehenderit culpa ipsum earum minima ad esse consequatur iusto error, excepturi beatae nisi ea, accusantium veniam, inventore deleniti repellat veritatis! Earum quam quaerat, ut asperiores voluptates assumenda harum officia labore nihil qui optio magni.</p>
             
-                <ul>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro necessitatibus accusantium minima nostrum eum quae eligendi sunt perferendis consequatur. Doloremque illo, doloribus nihil ratione hic provident nulla, autem accusamus, optio praesentium blanditiis pariatur suscipit dolorem consequatur magni vel corrupti magnam atque sequi? Quam accusantium sapiente non impedit, inventore aliquid enim?</p>
             </div>
-        </div>
-
-        <div class="specifications section">
-            <h4>Specifications</h4>
-
-            <table>
-                <tr>
-                    <td>Property</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Property</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Property</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Property</td>
-                    <td>Value</td>
-                </tr>
-            </table>
         </div>
 
         <div class="reviews section">
@@ -163,6 +194,13 @@
                         <li class="star"><i class="fa-solid fa-star"></i></li>
                         <li class="star"><i class="fa-solid fa-star"></i></li>
                     </ul>
+                    <div class="reviews-stats">
+                        <div class="review-row"><p>5</p><i class="fa-solid fa-star"></i> <div class="ammount"><div style="--i: 60%;" class="fill"></div></div> <span>60</span></div>
+                        <div class="review-row"><p>4</p><i class="fa-solid fa-star"></i> <div class="ammount"><div style="--i: 25%;" class="fill"></div></div> <span>25</span></div>
+                        <div class="review-row"><p>3</p><i class="fa-solid fa-star"></i> <div class="ammount"><div style="--i: 7%;" class="fill"></div></div> <span>7</span></div>
+                        <div class="review-row"><p>2</p><i class="fa-solid fa-star"></i> <div class="ammount"><div style="--i: 3%;" class="fill"></div></div> <span>3</span></div>
+                        <div class="review-row"><p>1</p><i class="fa-solid fa-star"></i> <div class="ammount"><div style="--i: 5%;" class="fill"></div></div> <span>5</span></div>
+                    </div>
                 </div>
 
                 <div class="top-reviews">
@@ -313,6 +351,18 @@
 
         <div class="suggestions section">
             <h4>You might also like</h4>
+
+            <div class="hori-layout" id="new-sec">
+                <a href="" class="item">
+                    <img src="Media/Images/Shoes/${shoes[i].id}_side.png" id="${shoes[i].id}_thumb" alt="" class="item_thmb">
+                    <h3 class="item-name">${shoes[i].name}</h3>
+                    <p class="item-price">R ${shoes[i].price}</p>
+                    <div class="item-actions">
+                        <button class="item-buy">Add to cart</button>
+                        <button class="item-like"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <footer class="site-footer">
@@ -387,16 +437,12 @@
 
     <script src="JavaScript/item.js"></script>
     <script>
-        $(".fa-solid.fa-close").click(function() {
-            $(".sale-banner").fadeOut();
-        });
-
         //Review Slider
         const reviewNavs = document.querySelectorAll(".reviews-nav-btn");
 
         for (let i = 0; i < reviewNavs.length; i++) {
             reviewNavs[i].addEventListener('click', function() {
-                $("#reviews-list").css("transform" , `translateX(-${i*560}px)`);
+                $("#reviews-list").css("transform" , `translateX(-${i*100}%)`);
                 reviewNavs.forEach(n => n.classList.remove("active"));
                 reviewNavs[i].classList.add("active");
             });

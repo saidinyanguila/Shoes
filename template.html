@@ -12,11 +12,6 @@
 <body>
     <div class="web-app">
         <nav class="pre-header">
-            <div class="region">
-                <img src="https://flagcdn.com/w320/za.png" alt="">
-                <p>ZA</p>
-            </div>
-
             <ul id="handy-links" style="list-style-type: none;">
                 <li class="mid"><a href="">Stores</a></li>
                 <li class="mid"><a href="">Orders</a></li>
@@ -25,7 +20,7 @@
             </ul>
         </nav>
 
-        <header class="site-header" style="display: flex; align-items: center; justify-content: space-between;">
+        <header class="site-header">
             <nav class="main-nav">
                 <div class="site-logo" style="margin-right: 18px;"><a href="/"><h2>Shoes</h2></a></div>
 
@@ -33,15 +28,57 @@
                     <li><a href="">Men</a></li>
                     <li><a href="">Women</a></li>
                     <li><a href="">Kids</a></li>
-                    <li class="dropdown"><a href="">Sports</a></li>
+                    <li><a href="">Sports</a></li>
+                    <li class="dropdown">
+                        <a>Brands</a>
+                        <div class="brands-list">
+                            <ul class="ul">
+                                <li><a href="">Nike</a></li>
+                                <li><a href="">Addidas</a></li>
+                                <li><a href="">Puma</a></li>
+                                <li><a href="">Reebok</a></li>
+                                <li><a href="">New Balance</a></li>
+                                <li><a href="">Under Armor</a></li>
+                                <li><a href="">Asics</a></li>
+                                <li><a href="">Skechers</a></li>
+                                <li><a href="">Converse</a></li>
+                                <li><a href="">Vans</a></li>
+                            </ul>
+                            <ul class="ul">
+                                <li><a href="">Dr. Martens</a></li>
+                                <li><a href="">Timberland</a></li>
+                                <li><a href="">Birkenstock</a></li>
+                                <li><a href="">Reebok</a></li>
+                                <li><a href="">Crocs</a></li>
+                                <li><a href="">Ugg</a></li>
+                                <li><a href="">Toms</a></li>
+                                <li><a href="">Allbirds</a></li>
+                                <li><a href="">Fila</a></li>
+                                <li><a href="">Steve Madden</a></li>
+                            </ul>
+                            <ul class="ul">
+                                <li><a href="">Gucci</a></li>
+                                <li><a href="">Balenciaga</a></li>
+                                <li><a href="">Prada</a></li>
+                                <li><a href="">Louis Vuitton</a></li>
+                                <li><a href="">Christian Louboutin</a></li>
+                                <li><a href="">Alexander McQueen</a></li>
+                                <li><a href="">Salvatore Ferragamo</a></li>
+                                <li><a href="">Jimmy Choo</a></li>
+                                <li><a href="">Chanel</a></li>
+                                <li><a href="">Hermès</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="" style="color: rgb(255, 40, 40);">Sale</a></li>
                 </ul>
             </nav>
 
             <nav class="menu-nav">
-                <button href="" class="nav-menu-button"><i class="fa-solid fa-search"></i></button>
-                <button href="" class="nav-menu-button"><i class="fa-solid fa-cart-shopping"></i></button>
-                <button class="nav-menu-button"><i class="fa-solid fa-user"></i></button>
+                <button id="btn-search" class="nav-menu-button"><i class="fa-solid fa-search"></i></button>
+                <button id="btn-cart" class="nav-menu-button"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button id="btn-user" class="nav-menu-button"><i class="fa-solid fa-user"></i></button>
+                <button id="btn-expand" class="nav-menu-button"><i class="fa-solid fa-bars"></i></button>
             </nav>
         </header>
 
@@ -50,9 +87,29 @@
             <i class="fa-solid fa-close"></i>
         </nav>
 
+        <div class="mobile-nav" id="mobile-nav">
+            <button id="btn-collapse"><i class="fa-solid fa-close"></i></button>
+
+            <div class="site-logo"><a href="/"><h2>Shoes</h2></a></div>
+
+            <ul>
+                <li><a href="">Men</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Kids</a></li>
+                <li><a href="">Sports</a></li>
+                <li><a href="">Brands</a></li>
+                <li><a href="" style="color: red;">Sale</a></li>
+            </ul>
+
+            <div class="btns">
+                <button id="mobile-btn-cart" style="margin-right: 10px;">Cart</button>
+                <button id="mobile-btn-user" style="margin-left: 10px;">Account</button>
+            </div>
+        </div>
+
         <!--Body-->
 
-        <footer class="site-footer">
+        <footer style="display: none;" class="site-footer">
             <div class="spacer"></div>
 
             <div class="footer-content">
@@ -114,7 +171,7 @@
             </div>
         </footer>
 
-        <div class="partners">
+        <div style="display: none;"  class="partners">
             <a href=""><img src="Media/Images/Partners/addidas.png" alt=""></a>
             <a href=""><img src="Media/Images/Partners/puma.png" alt=""></a>
             <a href=""><img src="Media/Images/Partners/nike.png" alt=""></a>
